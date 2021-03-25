@@ -1,0 +1,74 @@
+.textStyle {
+  font-size: 20px;
+  color: black;
+}
+
+.headerColor {
+  background: rgb(15, 126, 214);
+}
+
+.headertitle {
+  color: white;
+}
+.space {
+  font-size: 20px;
+  color: black;
+  margin-left: 40vw;
+}
+
+.customFooter {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.textStyleFooter {
+  font-size: 20px;
+  color: black;
+  margin-top: 20px;
+}
+
+.button {
+  margin: 10px;
+  height: 70px;
+  padding: 10;
+  width: 220px;
+  background: whitesmoke;
+  color: grey;
+  font-weight: 600;
+  border-color: whitesmoke;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: start;
+}
+
+.button:focus {
+  margin: 10px;
+  height: 70px;
+  padding: 10;
+  width: 220px;
+  background: whitesmoke;
+  color: grey;
+  font-weight: 600;
+  border-color: whitesmoke;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: start;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  border-color: rgb(15, 126, 214);
+  transition: 0.2s;
+  background-color: rgb(15, 126, 214);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+  color: white;
+}

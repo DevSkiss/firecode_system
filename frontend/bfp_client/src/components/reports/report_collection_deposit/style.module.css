@@ -1,0 +1,229 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  
+  justify-items: stretch;
+}
+
+@media print {
+  @page { 
+    size: 330mm 219mm; 
+    margin: 10mm;
+    }
+  .page-break {
+    margin-top: 1rem;
+    display: block;
+    page-break-before: auto;
+  }
+   
+}
+
+
+.firstbox {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.bfpheader{
+    align-self: center;
+}
+
+.bfpheader > h5 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > strong {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;   
+}
+
+.title {
+    grid-column: 1/5;
+}
+
+.title > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+
+.date {
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.secondbox {
+    grid-column: 1/5;
+    margin-top: 50px
+}
+
+.secondbox > p {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.thirdbox{
+    grid-column: 2/5;
+}
+
+.thirdbox > p {
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.fourthbox {
+    grid-column: 1/5;
+    margin-top: 20px;
+}
+
+.fourthbox > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.seventhbox {
+    grid-column: 1/5;
+}
+
+.table{
+  margin: 0px;
+  padding: 0px;
+  display: table;
+  width:50%;
+  border-collapse:collapse;
+}
+  .tablerow{
+    display: table-row;
+  }
+    .tablecell, .tablehead{
+      display: table-cell;
+      padding: 1em;
+      border:black 1px solid;
+    }
+    .tablehead{
+        font-weight:bold;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .tablecell {
+        text-align: center;
+        align-items: center;
+        white-space:nowrap;
+        font-size: 12px;
+    }
+    .tablecell > strong {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+        white-space:nowrap;
+        font-size: 12px;
+    }
+
+
+.eytpoyntpayb {
+    grid-column: 1/5;
+}
+
+.eytpoyntpayb > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+
+.eytpoyntsix {
+    grid-column: 1/5;
+}
+
+.eytpoyntsix > p {
+    padding-top: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+
+
+
+.ninthbox {
+    grid-column: 1/3;
+    margin-top: 50px;
+}
+
+.ninthbox > p {
+    padding-top: 0px;
+    margin: 0px;
+    display: flex;
+    font-size: 13px;
+}
+
+.ninthbox > p:nth-child(2) {
+    margin-top: 10px
+}
+
+
+.tenthbox {
+    grid-column: 3/5 ;
+    margin-top: 50px;
+    
+}
+
+.tenthbox > p {
+    padding-top: 0px;
+    margin: 0px;
+    display: flex;
+    font-size: 13px;
+}
+
+.tenthbox > p:nth-child(2) {
+    margin-top: 10px
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+{
+    "jshint.lintHTML": true,
+    "jshint.config": "",
+    "jshint.excludePath": "",
+    "jshint.options": {
+        "esversion": 8
+    }
+}

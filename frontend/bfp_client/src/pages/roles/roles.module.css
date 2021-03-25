@@ -1,0 +1,8 @@
+.tablehover {
+  box-shadow: 0 0px 15px rgba(27, 27, 27, 0.4);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.roles {
+  margin: 10px;
+}

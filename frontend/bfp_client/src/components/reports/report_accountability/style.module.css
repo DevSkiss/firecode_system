@@ -1,0 +1,255 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  
+  justify-items: stretch;
+}
+
+@media print {
+  @page { 
+    size: 330mm 219mm; 
+    margin: 10mm;
+    }
+  .page-break {
+    margin-top: 1rem;
+    display: block;
+    page-break-before: auto;
+  }
+   
+}
+
+.firstbox {
+    grid-column: 1/6;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.bfpheader{
+    align-self: center;
+}
+
+.bfpheader > h5 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > strong {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;   
+}
+
+.title {
+    grid-column: 1/6;
+}
+
+.title > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.secondbox {
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.thirdbox{
+    grid-column: 1/2        ;
+    display: flex;
+    justify-content: center;
+}
+
+.thirdbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+
+.fourthbox{
+    grid-column: 2/3    ;
+    display: flex;
+    justify-content: center;
+}
+
+.fourthbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.fifthbox{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+}
+
+.fifthbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.sixthbox{
+    grid-column: 4/5;
+    display: flex;
+    justify-content: center;
+}
+
+.sixthbox >  p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.seventhbox{
+    grid-column: 5/6;
+    display: flex;
+    justify-content: center;
+}
+
+.seventhbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.eigthbox{
+    grid-column: 1/2;
+}
+
+.ninthbox{
+    grid-column: 2/3;
+}
+
+.tenthbox{
+    grid-column: 3/4;
+}
+
+.eleventhbox{
+    grid-column: 4/5;
+}
+
+.twelvthbox{
+    grid-column: 5/6;
+}
+
+.thirteenthbox {
+    grid-column: 1/7;
+    font-size: 14px;
+}
+
+.thirteenthbox > p{
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fourteenthbox {
+    grid-column: 1/4;
+    margin-top: 20px;   
+}
+
+.fourteenthbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+
+
+.fifteenthbox    {
+    grid-column: 5/7;
+    margin-top: 20px;
+}
+
+.fifteenthbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.table{
+  margin: 0px;
+  padding: 0px;
+  display: table;
+  width:100%;
+  border-collapse:collapse;
+}
+  .tablerow{
+    display: table-row;
+  }
+    .tablecell, .tablehead{
+      display: table-cell;
+      padding: 1em;
+      border:black 1px solid;
+    }
+    .tablehead{
+        font-weight:bold;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+        word-wrap: false;
+    }
+
+    .tablecell {
+        text-align: center;
+        align-items: center;
+        white-space:nowrap;
+        font-size: 8px;
+    }
+    .tablecell > strong {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+        white-space:nowrap;
+        font-size: 8px;
+    }
+
+.withvalue {
+    grid-column: 1/4;
+}   
+
+.withvalue > p {
+    display: flex;
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px ;
+}
+
+

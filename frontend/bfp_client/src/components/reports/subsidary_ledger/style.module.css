@@ -1,0 +1,144 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  
+  justify-items: stretch;
+}
+
+.firstbox {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+.bfpheader{
+    align-self: center;
+}
+
+.bfpheader > h5 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > strong {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;   
+}
+
+.title {
+    grid-column: 1/4;
+}
+
+.title > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.date {
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.secondbox {
+    grid-column: 1/2;
+}
+
+.secondbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thirdbox {
+    grid-column: 2/3;
+}
+
+.thirdbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fourthbox {
+    grid-column: 3/4;
+}
+
+.fourthbox > p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fifthbox {
+    grid-column: 1/4;
+}
+
+.table{
+  margin: 0px;
+  padding: 0px;
+  display: table;
+  width:100%;
+  border-collapse:collapse;
+}
+  .tablerow{
+    display: table-row;
+  }
+    .tablecell, .tablehead{
+      display: table-cell;
+      padding: 1em;
+      border:black 1px solid;
+    }
+    .tablehead{
+        font-weight:bold;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .tablecell {
+        text-align: center;
+        align-items: center;
+        white-space:nowrap;
+        font-size: 12px;
+    }
+
+    .tablecell > p {
+        font-weight: bold;
+        padding: 0px;
+        margin: 0px;
+    }
+

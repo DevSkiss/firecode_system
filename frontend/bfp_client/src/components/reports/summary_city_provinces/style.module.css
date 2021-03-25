@@ -1,0 +1,148 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: auto;
+  
+  justify-items: stretch;
+}
+
+
+@media print {
+  @page { 
+    size: 330mm 219mm; 
+    margin: 20mm;
+    }
+  .page-break {
+    margin-top: 1rem;
+    display: block;
+    page-break-before: auto;
+  }
+   
+}
+
+.firstbox {
+        grid-column: 1/12;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.bfpheader{
+    align-self: center;
+}
+
+.bfpheader > h5 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > strong {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;   
+}
+
+.title {
+    grid-column: 1/12;
+}
+
+.title > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.secondbox {
+    grid-column: 5/6;
+    display: flex;  
+}
+.secondbox > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.thirdbox {
+    grid-column: 8/10;
+    display: flex;
+    justify-content: center;
+}
+
+.thirdbox > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fourthbox {
+    grid-column: 10/11;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fourthbox > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fifthbox {
+    grid-column: 1/12;
+}
+
+.table{
+  margin: 0px;
+  padding: 0px;
+  display: table;
+  width:100%;
+  border-collapse:collapse;
+}
+  .tablerow{
+    display: table-row;
+  }
+    .tablecell, .tablehead{
+      display: table-cell;
+      padding: 1em;
+      border:black 1px solid;
+    }
+    .tablehead{
+        font-weight:bold;
+        align-items: center;
+        text-align: center;
+        font-size: 8px;
+        white-space: nowrap;
+        word-wrap: false;
+    }
+
+    .tablecell {
+        text-align: center;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 8px;
+    }   

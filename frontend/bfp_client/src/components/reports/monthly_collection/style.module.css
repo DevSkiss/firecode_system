@@ -1,0 +1,191 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  
+  justify-items: stretch;
+}
+
+
+.firstbox {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.bfpheader{
+    align-self: center;
+}
+
+.bfpheader > h5 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > strong {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bfpheader > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;   
+}
+
+.title {
+    grid-column: 1/5;
+}
+
+.title > h4 {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.title > h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.date {
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.secondbox {
+    grid-column: 1/5;
+    margin-top: 50px
+}
+
+.secondbox > p {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.thirdbox{
+    grid-column: 2/5;
+}
+
+.thirdbox > p {
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.fourthbox {
+    grid-column: 1/3;
+    margin-top: 20px;
+}
+
+.fourthbox > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.fifthbox {
+    grid-column: 3/5;
+    margin-top: 20px;
+}
+
+.fifthbox > p {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.seventhbox {
+    grid-column: 1/3;
+}
+
+.table{
+  margin: 0px;
+  padding: 0px;
+  display: table;
+  width:100%;
+  border-collapse:collapse;
+}
+  .tablerow{
+    display: table-row;
+  }
+    .tablecell, .tablehead{
+      display: table-cell;
+      padding: 1em;
+      border:#f0f0f0 1px solid;
+    }
+    .tablehead{
+        font-weight:bold;
+    }
+
+.eightbox {
+    grid-column: 3/5;
+}
+
+
+
+.eightbox > h5 {
+    padding-top: 0px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.ninthbox {
+    grid-column: 1/3;
+    margin-top: 50px;
+}
+
+.ninthbox > p {
+    padding-top: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.ninthbox > p:nth-child(2) {
+    margin-top: 10px
+}
+
+
+.tenthbox {
+    grid-column: 3/5 ;
+    margin-top: 50px;
+}
+
+.tenthbox > p {
+    padding-top: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.tenthbox > p:nth-child(2) {
+    margin-top: 10px
+}

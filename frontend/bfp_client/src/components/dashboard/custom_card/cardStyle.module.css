@@ -1,0 +1,40 @@
+.customcard {
+  height: 250px;
+  max-width: 100%;
+  background: white;
+  border-radius: 30px;
+  margin: 10px;
+  border: none;
+  overflow: auto;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  background: linear-gradient(to left, #d21 0%, #216 20%, #216 100%);
+}
+
+.customcardheader {
+  font-size: 2em;
+  padding: 20px 20px 0px 20px;
+  color: white;
+}
+
+.pesosymbol {
+  font-size: 3em;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.textamountstyle {
+  font-size: 4em;
+  padding-left: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.amount {
+  display: inline-flex;
+}

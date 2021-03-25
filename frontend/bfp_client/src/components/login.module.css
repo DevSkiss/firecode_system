@@ -1,0 +1,107 @@
+.customcard {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 0px 40px rgba(0, 0, 0, 1);
+  background: linear-gradient(to left, rgb(255,252,0) 0%, rgb(0,17,44) 50%, rgb(0,17,44) 100%);
+}
+
+.image {
+  justify-content: center;
+  display: flex;
+}
+
+
+.formFormatter  {
+  padding: 30px;
+  margin: 0px;
+}
+
+.customrow {
+  justify-content: center;
+}
+
+.username {
+  color: white; opacity: .8;
+  font-size: 1.0em;
+  margin: 0px;
+  padding: 0px;
+}
+
+.password {
+   color: white; opacity: .8;
+  font-size: 1.0em;
+    margin: 20px 0px 0px 0px;
+  padding: 0px;
+}
+
+.formGroup {
+  padding: 0px;
+  margin: 0px;
+}
+
+.formControl {
+  padding: 15px;
+  margin: 0px;
+}
+
+.buttonformatter {
+  display: flex;
+  justify-content: center;
+}
+
+.custombutton {
+  margin: 50px 20px 20px 20px;
+  height: 40px;
+  padding: 10;
+  width: 100%;
+  background: whitesmoke;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  border-color: whitesmoke;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.custombutton:focus {
+ margin: 20px;
+  height: 40px;
+  padding: 10;
+  width: 100%;
+  background: whitesmoke;
+  color: grey;
+  font-weight: 600;
+  border-color: whitesmoke;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.custombutton:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: 0.4s;
+  background-color: rgb(255,252,0);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+  color: rgb(0,17,44);
+}
+
+.bfplogo {
+  height: 8em;
+  width: 8em;
+}

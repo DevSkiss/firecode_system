@@ -1,0 +1,21 @@
+.form{
+    padding: 0px;
+    margin: 0px;
+}
+
+.textlabel {
+    padding: 0px;
+    margin: 0px;
+}
+
+.textfield {
+    padding: 15 px;
+    margin: 10px 0px 10px 0px;
+}
+
+.notMatched {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+}
