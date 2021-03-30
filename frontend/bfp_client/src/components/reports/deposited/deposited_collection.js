@@ -12,7 +12,7 @@ import PaymentService from '../../../service/payment_service';
 import DepositService from '../../../service/deposit_service';
 //end
 
-export default function DepositedCollection() {
+export default function DepositedCollection(props) {
   const _transactionService = new TransactionService();
   const _paymentService = new PaymentService();
   const _depositedService = new DepositService();
@@ -48,24 +48,15 @@ export default function DepositedCollection() {
     "Others Fees",
   ];
 
-  useEffect(() => {
-    getData();
-  }, []);
-
-  async function getData() {
-    setData(await _depositedService.getAllDeposited());
-  }
-
-  console.log(data);
+  let listOfPayment = props.listOfPayment;
 
   const getTotal = (props) => {
     let tempTotal = 0;
-    data.map((payment) => {
-      let temp
+    listOfPayment.map((payment) => {
       if (payment.firecode === props) {
         tempTotal = tempTotal + payment.amount;
         totalAmount = totalAmount + payment.amount;
-      }  
+      }
     });
     return tempTotal;
   };
@@ -85,23 +76,6 @@ export default function DepositedCollection() {
 
   return (
     <>
-      <Row className="d-flex justify-content-between">
-        <div>
-          <Button variant="success">Export as EXCEL</Button>
-          <Button className="ml-2">Print as PDF</Button>
-        </div>
-        <MuiPickersUtilsProvider libInstance={moment} utils={MomentUtils}>
-          <DatePicker
-            variant="inline"
-            views={["year", "month"]}
-            label="Select Date"
-            format="MMMM yyyy"
-            disableFuture
-            value={toDate}
-            onChange={setToDate}
-          />
-        </MuiPickersUtilsProvider>
-      </Row>
       <div className={style.wrapper}>
         <div className={style.firstbox}>
           <div className={style.title}>
@@ -112,15 +86,15 @@ export default function DepositedCollection() {
           </div>
         </div>
         <div className={style.secondbox}>
-          <p>List of Collections No.: _____________________ </p>
-          <p>BANK: _____________________</p>
-          <p>BANK CODE: _____________________</p>
+          <p>List of Collections No.: {props.lc} </p>
+          <p>BANK: {props.bank}</p>
+          <p>BANK CODE: {props.bankCode}</p>
         </div>
         <div className={style.thirdbox}>
-          <p>Name of Agency: _____________________ </p>
-          <p>Agency Code: _____________________</p>
-          <p>Station Code: _____________________</p>
-          <p>Area Code: _____________________</p>
+          <p>Name of Agency: BFP </p>
+          <p>Agency Code: {props.agencyCode}</p>
+          <p>Station Code: {props.stationCode}</p>
+          <p>Area Code: {props.areaCode}</p>
         </div>
         <div className={style.fourthbox}>
           <div className={style.table}>
@@ -139,7 +113,9 @@ export default function DepositedCollection() {
           </strong>
         </div>
         <div className={style.sixthbox}>
-          <p className="d-flex justify-content-center">{user.rank + " " + user.fullName}</p>
+          <p className="d-flex justify-content-center">
+            {user.rank + " " + user.fullName}
+          </p>
           <p className={style.collecting}>Collecting Officer</p>
           <p>C.O Code: _____________________</p>
         </div>

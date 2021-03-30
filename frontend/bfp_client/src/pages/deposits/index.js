@@ -1,5 +1,5 @@
 import { Button, Modal, Row, Col, Form, Table, Spinner } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import swal from "sweetalert";
 import DepositService from "../../service/deposit_service";
 import UserService from "../../../services/user_service";
@@ -8,6 +8,8 @@ import MomentUtils from "@date-io/moment";
 import moment from "moment";
 import PaymentService from "../../service/payment_service";
 import CommaSeparated from "../../../helper/comma_separated";
+import Pdf from "react-to-pdf";
+import DepositedCollection from "../../components/reports/deposited/deposited_collection";
 
 export default function Index() {
   const paymentService = new PaymentService();
@@ -17,6 +19,7 @@ export default function Index() {
   const [deposits, setDeposit] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showPrintModal, setShowPrintModal] = useState(false);
   const handleClose = () => {
     setShowModal(false);
     setShowAddModal(false);
@@ -24,7 +27,24 @@ export default function Index() {
     setLcno('');
     setUndeposited(0);
     setRemarks('');
+    setShowPrintModal(false);
+    setShow(false);
   };
+
+  //print modal variables
+  const [areaCode, setAreaCode] = useState('');
+  const [stationCode, setStationCode] = useState('');
+  const [agencyCode, setAgencyCode] = useState('');
+  const [bank, setBank] = useState('');
+  const [bankCode, setBankCode] = useState('');
+  const [lc, setLc] = useState('');
+  const [lcDate, setLcDate] = useState('');
+  const [coCode, setCoCode] = useState('');
+  const [listOfPayment, setListOfPayment] = useState([]);
+ 
+  const printRef = useRef();
+  const [show, setShow] = useState(false);
+
   const [isBusy, setBusy] = useState(false);
   const [depositId, setDepositId] = useState("");
   const [lcno, setLcno] = useState("");
@@ -91,7 +111,6 @@ export default function Index() {
     let temp = moment(new Date(payment.createdAt), "YYYY-MM-DD, h:mm:ss a");
     let temp2 = moment(new Date(toDate), "YYYY-MM-DD, h:mm:ss a");
     if (moment(temp).isBefore(temp2) && payment.deposited === false) {
-      console.log(payment);
       tempTotal = tempTotal + payment.amount;
       tempPayment.push({paymentId: payment._id, firecode: payment.firecode, amount: payment.amount});
       return (
@@ -123,10 +142,25 @@ export default function Index() {
           >
             Update
           </Button>
+          <Button
+            className="ml-2"
+            variant="success"
+            onClick={() => {
+              setLc(deposit.lcno);
+              setLcDate(moment(deposit.modifiedAt).format('YYYY-MM-DD, h:mm:ss a'));
+              setListOfPayment(deposit.listOfPayment);
+              setShowPrintModal(true);
+              setShow(true);
+            }}
+          >
+          Print LCp
+          </Button>
         </td>
       </tr>
     );
   });
+
+ 
 
   if (isBusy)
     return (
@@ -154,7 +188,6 @@ export default function Index() {
         </thead>
         <tbody>{showDeposit}</tbody>
       </Table>
-
       <Modal show={showModal} onHide={handleClose} centered>
         <Modal.Header closeButton className="headerColor">
           <Modal.Title>Update Deposit Details</Modal.Title>
@@ -243,6 +276,82 @@ export default function Index() {
           </Row>
         </Modal.Body>
       </Modal>
+      {/* onst [areaCode, setAreaCode] = useState(''); const [stationCode,
+      setStationCode] = useState(''); const [agencyCode, setAgencyCode] =
+      useState(''); const [bank, setBank] = useState(''); const [bankCode,
+      setBankCode] = useState(''); */}
+      {/* Print Modal */}
+      <Modal show={showPrintModal} onHide={handleClose} centered>
+        <Modal.Header closeButton className="headerColor">
+          <Modal.Title>List of Collections</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Please always re-check if the details are correct.</p>
+          <Form.Group>
+            <Form.Control
+              type="text"
+              value={areaCode}
+              placeholder="Area Code"
+              onChange={(e) => setAreaCode(e.target.value)}
+            />
+            <Form.Control
+              type="text"
+              value={stationCode}
+              placeholder="Station Code"
+              onChange={(e) => setStationCode(e.target.value)}
+            />
+            <Form.Control
+              type="text"
+              value={agencyCode}
+              placeholder="Agency Code"
+              onChange={(e) => setAgencyCode(e.target.value)}
+            />
+            <Form.Control
+              type="text"
+              value={bank}
+              placeholder="Bank"
+              onChange={(e) => setBank(e.target.value)}
+            />
+            <Form.Control
+              type="text"
+              value={bankCode}
+              placeholder="Bank Code"
+              onChange={(e) => setBankCode(e.target.value)}
+            />
+            <Form.Control
+              type="text"
+              value={coCode}
+              placeholder="Collection Officer Code"
+              onChange={(e) => setCoCode(e.target.value)}
+            />
+          </Form.Group>
+          <Row className="d-flex justify-content-center">
+            <Pdf targetRef={printRef} filename="code-example.pdf">
+              {({ toPdf }) => (
+                <Button variant="primary" onClick={toPdf}>
+                  Generate Pdf
+                </Button>
+              )}
+            </Pdf>
+          </Row>
+        </Modal.Body>
+      </Modal>
+      {show ? (
+        <div ref={printRef} className="hidetoside">
+          <DepositedCollection
+            lc={lc}
+            agencyCode={agencyCode}
+            stationCode={stationCode}
+            bank={bank}
+            bankCode={bankCode}
+            areaCode={areaCode}
+            coCode={coCode}
+            listOfPayment={listOfPayment}
+          />
+        </div>
+      ) : (
+        <div></div>
+      )}
     </>
   );
 }

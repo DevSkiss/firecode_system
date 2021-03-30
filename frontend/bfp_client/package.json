@@ -30,6 +30,7 @@
     "react-dom": "16.13.1",
     "react-loader-spinner": "^4.0.0",
     "react-sidebar-ui": "^1.2.1",
+    "react-to-pdf": "^0.0.13",
     "react-to-print": "^2.12.2",
     "sweetalert": "^2.1.2"
   },

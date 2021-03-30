@@ -38,7 +38,7 @@ const ConveyanceHmcc = (props) => {
       setResultCarryHCG(1049);
     } else if (carryHCG > 500) {
       setResultCarryHCG(
-        500 + Math.ceil((Math.ceil((carryHCG - 500) / 100) * 100) / 100) * 70
+        1049 + Math.ceil((Math.ceil((carryHCG - 500) / 100) * 100) / 100) * 70
       );
     } else {
       setResultCarryHCG(0);
@@ -67,10 +67,10 @@ const ConveyanceHmcc = (props) => {
       );
     } else if (ulLiquidHCG > 40000) {
       setResultUlLiquidHCG(
-        700 +
-          Math.ceil((Math.ceil((ulLiquidHCG - 2000) / 400) * 100) / 100) * 350 +
-          Math.ceil((Math.ceil((ulLiquidHCG - 40000) / 400) * 100) / 1000) * 35
+       33950 +  Math.ceil((Math.ceil((ulLiquidHCG - 40000) / 4000) * 100) / 100) * 35
       );
+            
+      
     } else {
       setResultUlLiquidHCG(0);
     }
@@ -85,9 +85,7 @@ const ConveyanceHmcc = (props) => {
       );
     } else if (ulKgsHCG > 10000) {
       setResultUlKgsHCH(
-        700 +
-          Math.ceil((Math.ceil((ulKgsHCG - 2000) / 100) * 100) / 100) * 350 +
-          Math.ceil((Math.ceil((ulKgsHCG - 10000) / 100) * 100) / 1000) * 35
+          28700 + Math.ceil((Math.ceil((ulKgsHCG - 10000) / 100) * 100) / 1000) * 35
       );
     } else {
       setResultUlKgsHCH(0);

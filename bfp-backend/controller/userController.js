@@ -28,7 +28,7 @@ module.exports.register = async (params) => {
     address: params.address,
     municipality: params.municipality,
     province: params.province,
-    station: params.station,    
+    station: params.station,
     mobileNo: params.mobileNo,
     username: params.username,
     password: bcrypt.hashSync(params.password, 15),
@@ -54,7 +54,6 @@ module.exports.updateUser = async (params) => {
   return result ? true : false;
 };
 
-
 //login
 module.exports.login = async (params) => {
   const result = await User.findOne({ username: params.username });
@@ -78,7 +77,7 @@ module.exports.changePassword = async (params) => {
   if (result == null) {
     return false;
   }
-  
+
   const isPasswordMatched = bcrypt.compareSync(
     params.password,
     result.password
