@@ -63,8 +63,8 @@ export default function Bfpr8({ Component, pageProps }) {
       console.log(await result);
     } else {
       const createResult = await authService.createUser(
-        user,
-        user,
+        "Firstname",
+        "Lastname",
         user,
         "secret",
         "Rank",
